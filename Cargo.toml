@@ -1,0 +1,21 @@
+[package]
+name = "conways_game_of_life"
+version = "0.9.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = {version = "*", features = []}
+
+[profile.dev]
+opt-level = 1
+
+# Enable high optimizations for dependencies (incl. Bevy), but not >
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+opt-level = 'z'
+lto = "thin"
+
