@@ -66,3 +66,4 @@ profile*
 # Added by cargo
 
 /target
+/out
